@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>addon/form-items/DynamicMultiSelectView.js - ember-form</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+	    <img alt="ember-form" src="../assets/css/logo.png" style="max-height: 65%;" title="ember-form">
+            ember-form
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>1.0.0.f81fbd31</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/EmberForm.CheckBoxView", "classes/EmberForm.DisableForColumn", "classes/EmberForm.DynamicMultiSelectView", "classes/EmberForm.DynamicSelectView", "classes/EmberForm.FileUploadView", "classes/EmberForm.FormColumnData", "classes/EmberForm.FormColumnDataGroup", "classes/EmberForm.FormComponent", "classes/EmberForm.GroupRadioButtonView", "classes/EmberForm.HideForColumn", "classes/EmberForm.LabelView", "classes/EmberForm.Legend", "classes/EmberForm.MultiColumnMixin", "classes/EmberForm.MultiEntryView", "classes/EmberForm.MultiInputView", "classes/EmberForm.MultipleValue", "classes/EmberForm.MultipleValueMixin", "classes/EmberForm.RadioInputView", "classes/EmberForm.StaticSelectView", "classes/EmberForm.TextAreaView", "classes/EmberForm.TextInputView", "classes/EmberForm.WrapperView", "modules/ember-form", "modules/ember-form-column-data", "modules/ember-form-items"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <h3>APIs</h3>
+	        <div id="sidebar">
+	            <ul id="main-nav" class="nav nav-tabs" style="margin-bottom:0;">
+	                <li class="active"><a href="#classes" data-toggle="tab">Classes</a></li>
+	                <li><a href="#modules" data-toggle="tab">Modules</a></li>
+	            </ul>
+	    
+	            <div id="api-tabview-filter">
+	                <input type="search" placeholder="Type to filter APIs">
+	            </div>
+	    
+	            <div class="tab-content" style="border: 1px solid #DDD; border-top:0;">
+	                <div class="tab-pane active" id="classes">
+	                    <ul id="api-classes" class="nav nav-list">
+	                            <li><a href="../classes/EmberForm.CheckBoxView.html">EmberForm.CheckBoxView</a></li>
+	                            <li><a href="../classes/EmberForm.DisableForColumn.html">EmberForm.DisableForColumn</a></li>
+	                            <li><a href="../classes/EmberForm.DynamicMultiSelectView.html">EmberForm.DynamicMultiSelectView</a></li>
+	                            <li><a href="../classes/EmberForm.DynamicSelectView.html">EmberForm.DynamicSelectView</a></li>
+	                            <li><a href="../classes/EmberForm.FileUploadView.html">EmberForm.FileUploadView</a></li>
+	                            <li><a href="../classes/EmberForm.FormColumnData.html">EmberForm.FormColumnData</a></li>
+	                            <li><a href="../classes/EmberForm.FormColumnDataGroup.html">EmberForm.FormColumnDataGroup</a></li>
+	                            <li><a href="../classes/EmberForm.FormComponent.html">EmberForm.FormComponent</a></li>
+	                            <li><a href="../classes/EmberForm.GroupRadioButtonView.html">EmberForm.GroupRadioButtonView</a></li>
+	                            <li><a href="../classes/EmberForm.HideForColumn.html">EmberForm.HideForColumn</a></li>
+	                            <li><a href="../classes/EmberForm.LabelView.html">EmberForm.LabelView</a></li>
+	                            <li><a href="../classes/EmberForm.Legend.html">EmberForm.Legend</a></li>
+	                            <li><a href="../classes/EmberForm.MultiColumnMixin.html">EmberForm.MultiColumnMixin</a></li>
+	                            <li><a href="../classes/EmberForm.MultiEntryView.html">EmberForm.MultiEntryView</a></li>
+	                            <li><a href="../classes/EmberForm.MultiInputView.html">EmberForm.MultiInputView</a></li>
+	                            <li><a href="../classes/EmberForm.MultipleValue.html">EmberForm.MultipleValue</a></li>
+	                            <li><a href="../classes/EmberForm.MultipleValueMixin.html">EmberForm.MultipleValueMixin</a></li>
+	                            <li><a href="../classes/EmberForm.RadioInputView.html">EmberForm.RadioInputView</a></li>
+	                            <li><a href="../classes/EmberForm.StaticSelectView.html">EmberForm.StaticSelectView</a></li>
+	                            <li><a href="../classes/EmberForm.TextAreaView.html">EmberForm.TextAreaView</a></li>
+	                            <li><a href="../classes/EmberForm.TextInputView.html">EmberForm.TextInputView</a></li>
+	                            <li><a href="../classes/EmberForm.WrapperView.html">EmberForm.WrapperView</a></li>
+	                    </ul>
+	                </div>
+	    
+	                <div class="tab-pane" id="modules">
+	                    <ul id="api-modules" class="nav nav-list">
+	                            <li><a href="../modules/ember-form.html">ember-form</a></li>
+	                            <li><a href="../modules/ember-form-column-data.html">ember-form-column-data</a></li>
+	                            <li><a href="../modules/ember-form-items.html">ember-form-items</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <div class="page-header">
+                            <h1>addon/form-items/DynamicMultiSelectView.js <small>File</small></h1>
+                        </div>
+                        
+                        <div class="file">
+                            <pre class="prettyprint linenums">
+                        import Ember from &quot;ember&quot;;
+                        import DynamicSelectView from &quot;./DynamicSelectView&quot;;
+                        import MultipleValueMixin from &quot;./MultipleValueMixin&quot;;
+                        import template from &quot;../templates/views/dynamic-multi-select&quot;;
+                        
+                        /**
+                         * View for a select tag with dynamic options and multiple selections.
+                         *
+                         * @class EmberForm.DynamicMultiSelectView
+                         * @extends EmberForm.StaticSelectView
+                         * @module ember-form
+                         * @submodule ember-form-items
+                         */
+                        export default DynamicSelectView.extend(MultipleValueMixin, {
+                          init : function() {
+                            this._super();
+                            this.set(&quot;selection&quot;, this.get(&quot;selection&quot;) || Ember.A());
+                            this.valuesArrayDidChange_Selection();
+                            this.selectionDidChange();
+                          },
+                        
+                          selectionLock : false,
+                        
+                          valuesArrayDidChange_Selection : Ember.observer(&quot;values.@each.value&quot;, &quot;view.values.@each.value&quot;, function() {
+                            if(!this.get(&quot;selectionLock&quot;)) {
+                              var values = this.get(&quot;values&quot;);
+                              this.set(&quot;selectionLock&quot;, true);
+                              this.get(&quot;selection&quot;).replace(0, this.get(&quot;selection.length&quot;), Ember.A(this.get(&quot;selectOptions&quot;).filter(function(sel) {
+                                return !Ember.isEmpty(values.findBy(&quot;val&quot;, sel.get(&quot;val&quot;)));
+                              })));
+                            }
+                            else {
+                              this.set(&quot;selectionLock&quot;, false);
+                            }
+                          }),
+                        
+                          selectionDidChange : Ember.observer(&quot;selection.@each&quot;, &quot;view.selection.@each&quot;, &quot;view.selectOptions.@each&quot;, &quot;selectOptions.@each&quot;, function() {
+                            if(!this.get(&quot;selectionLock&quot;)) {
+                              var
+                              selection = this.get(&quot;selection&quot;),
+                              selectOptions = this.get(&quot;selectOptions&quot;);
+                              this.set(&quot;selectionLock&quot;, true);
+                              selection.replace(0, selection.get(&quot;length&quot;), Ember.A(selection.filter(function(sel) {
+                                return !Ember.isEmpty(selectOptions.findBy(&quot;val&quot;, sel.get(&quot;val&quot;)));
+                              })));
+                              this.set(&quot;values&quot;, Ember.A(selection.slice()));
+                            }
+                            else {
+                              this.set(&quot;selectionLock&quot;, false);
+                            }
+                          }),
+                        
+                          selection : null,
+                        
+                          template : template,
+                        });
+                        
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

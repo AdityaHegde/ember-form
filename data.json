@@ -1,0 +1,907 @@
+{
+    "project": {
+        "name": "ember-form",
+        "description": "Ember form module with flexible dynamic inputs.",
+        "version": "1.0.0.f81fbd31"
+    },
+    "files": {
+        "addon/components/ember-form.js": {
+            "name": "addon/components/ember-form.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.FormComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-column-data/DisableForColumn.js": {
+            "name": "addon/form-column-data/DisableForColumn.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.DisableForColumn": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-column-data/FormColumnData.js": {
+            "name": "addon/form-column-data/FormColumnData.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.FormColumnData": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-column-data/FormColumnDataGroup.js": {
+            "name": "addon/form-column-data/FormColumnDataGroup.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.FormColumnDataGroup": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-column-data/HideForColumn.js": {
+            "name": "addon/form-column-data/HideForColumn.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.HideForColumn": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-column-data/index.js": {
+            "name": "addon/form-column-data/index.js",
+            "modules": {
+                "ember-form-column-data": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/CheckBoxView.js": {
+            "name": "addon/form-items/CheckBoxView.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.CheckBoxView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/DynamicMultiSelectView.js": {
+            "name": "addon/form-items/DynamicMultiSelectView.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.DynamicMultiSelectView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/DynamicSelectView.js": {
+            "name": "addon/form-items/DynamicSelectView.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.DynamicSelectView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/FileUploadView.js": {
+            "name": "addon/form-items/FileUploadView.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.FileUploadView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/GroupRadioButtonView.js": {
+            "name": "addon/form-items/GroupRadioButtonView.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.GroupRadioButtonView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/LabelView.js": {
+            "name": "addon/form-items/LabelView.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.LabelView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/LegendView.js": {
+            "name": "addon/form-items/LegendView.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.Legend": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/MultiEntryView.js": {
+            "name": "addon/form-items/MultiEntryView.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.MultiEntryView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/MultiInputView.js": {
+            "name": "addon/form-items/MultiInputView.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.MultiInputView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/MultipleValue.js": {
+            "name": "addon/form-items/MultipleValue.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.MultipleValue": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/MultipleValueMixin.js": {
+            "name": "addon/form-items/MultipleValueMixin.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.MultipleValueMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/RadioInputView.js": {
+            "name": "addon/form-items/RadioInputView.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.RadioInputView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/StaticSelectView.js": {
+            "name": "addon/form-items/StaticSelectView.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.StaticSelectView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/TextAreaView.js": {
+            "name": "addon/form-items/TextAreaView.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.TextAreaView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/TextInputView.js": {
+            "name": "addon/form-items/TextInputView.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.TextInputView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/WrapperView.js": {
+            "name": "addon/form-items/WrapperView.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.WrapperView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/form-items/index.js": {
+            "name": "addon/form-items/index.js",
+            "modules": {
+                "ember-form-items": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/MultiColumnMixin.js": {
+            "name": "addon/MultiColumnMixin.js",
+            "modules": {},
+            "classes": {
+                "EmberForm.MultiColumnMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/index.js": {
+            "name": "addon/index.js",
+            "modules": {
+                "ember-form": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "ember-form-column-data": {
+            "name": "ember-form-column-data",
+            "submodules": {},
+            "classes": {
+                "EmberForm.FormComponent": 1,
+                "EmberForm.DisableForColumn": 1,
+                "EmberForm.FormColumnData": 1,
+                "EmberForm.FormColumnDataGroup": 1,
+                "EmberForm.HideForColumn": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ember-form",
+            "tag": "module",
+            "file": "addon/form-column-data/HideForColumn.js",
+            "line": 3,
+            "description": "Base form view.\nUsage:\n\n    {{ember-form record=record columnDataGroup=columnDataGroup}}"
+        },
+        "ember-form": {
+            "name": "ember-form",
+            "submodules": {
+                "undefined": 1,
+                "ember-form-column-data": 1,
+                "ember-form-items": 1
+            },
+            "classes": {
+                "EmberForm.CheckBoxView": 1,
+                "EmberForm.FormComponent": 1,
+                "EmberForm.DisableForColumn": 1,
+                "EmberForm.FormColumnData": 1,
+                "EmberForm.FormColumnDataGroup": 1,
+                "EmberForm.HideForColumn": 1,
+                "EmberForm.DynamicMultiSelectView": 1,
+                "EmberForm.DynamicSelectView": 1,
+                "EmberForm.FileUploadView": 1,
+                "EmberForm.GroupRadioButtonView": 1,
+                "EmberForm.LabelView": 1,
+                "EmberForm.Legend": 1,
+                "EmberForm.MultiEntryView": 1,
+                "EmberForm.MultiInputView": 1,
+                "EmberForm.MultipleValue": 1,
+                "EmberForm.MultipleValueMixin": 1,
+                "EmberForm.RadioInputView": 1,
+                "EmberForm.StaticSelectView": 1,
+                "EmberForm.TextAreaView": 1,
+                "EmberForm.TextInputView": 1,
+                "EmberForm.WrapperView": 1,
+                "EmberForm.MultiColumnMixin": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "addon/MultiColumnMixin.js",
+            "line": 4,
+            "description": "A module for a form."
+        },
+        "ember-form-items": {
+            "name": "ember-form-items",
+            "submodules": {},
+            "classes": {
+                "EmberForm.CheckBoxView": 1,
+                "EmberForm.DynamicMultiSelectView": 1,
+                "EmberForm.DynamicSelectView": 1,
+                "EmberForm.FileUploadView": 1,
+                "EmberForm.GroupRadioButtonView": 1,
+                "EmberForm.LabelView": 1,
+                "EmberForm.Legend": 1,
+                "EmberForm.MultiEntryView": 1,
+                "EmberForm.MultiInputView": 1,
+                "EmberForm.MultipleValue": 1,
+                "EmberForm.MultipleValueMixin": 1,
+                "EmberForm.RadioInputView": 1,
+                "EmberForm.StaticSelectView": 1,
+                "EmberForm.TextAreaView": 1,
+                "EmberForm.TextInputView": 1,
+                "EmberForm.WrapperView": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/WrapperView.js",
+            "line": 5,
+            "description": "Module with all the form items."
+        }
+    },
+    "classes": {
+        "EmberForm.FormComponent": {
+            "name": "EmberForm.FormComponent",
+            "shortname": "EmberForm.FormComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "file": "addon/components/ember-form.js",
+            "line": 5,
+            "description": "Base form view.\nUsage:\n\n    {{ember-form record=record columnDataGroup=columnDataGroup}}",
+            "submodule": "ember-form-column-data"
+        },
+        "EmberForm.DisableForColumn": {
+            "name": "EmberForm.DisableForColumn",
+            "shortname": "EmberForm.DisableForColumn",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "file": "addon/form-column-data/DisableForColumn.js",
+            "line": 3,
+            "description": "Entry to disable/enable column based on value of another.",
+            "submodule": "ember-form-column-data"
+        },
+        "EmberForm.FormColumnData": {
+            "name": "EmberForm.FormColumnData",
+            "shortname": "EmberForm.FormColumnData",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-column-data/FormColumnData.js",
+            "line": 7,
+            "description": "Column data for form module.",
+            "submodule": "ember-form-column-data"
+        },
+        "EmberForm.FormColumnDataGroup": {
+            "name": "EmberForm.FormColumnDataGroup",
+            "shortname": "EmberForm.FormColumnDataGroup",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-column-data/FormColumnDataGroup.js",
+            "line": 3,
+            "description": "Column data group for form.",
+            "submodule": "ember-form-column-data"
+        },
+        "EmberForm.HideForColumn": {
+            "name": "EmberForm.HideForColumn",
+            "shortname": "EmberForm.HideForColumn",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-column-data/HideForColumn.js",
+            "line": 3,
+            "description": "Entry to show/hide column based on value of another.",
+            "submodule": "ember-form-column-data"
+        },
+        "EmberForm.CheckBoxView": {
+            "name": "EmberForm.CheckBoxView",
+            "shortname": "EmberForm.CheckBoxView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/CheckBoxView.js",
+            "line": 4,
+            "description": "View for checkbox input.",
+            "submodule": "ember-form-items",
+            "extends": "EmberForm.TextInputView"
+        },
+        "EmberForm.DynamicMultiSelectView": {
+            "name": "EmberForm.DynamicMultiSelectView",
+            "shortname": "EmberForm.DynamicMultiSelectView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/DynamicMultiSelectView.js",
+            "line": 6,
+            "description": "View for a select tag with dynamic options and multiple selections.",
+            "submodule": "ember-form-items",
+            "extends": "EmberForm.StaticSelectView"
+        },
+        "EmberForm.DynamicSelectView": {
+            "name": "EmberForm.DynamicSelectView",
+            "shortname": "EmberForm.DynamicSelectView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/DynamicSelectView.js",
+            "line": 5,
+            "description": "View for a select tag with dynamic options.",
+            "submodule": "ember-form-items",
+            "extends": "EmberForm.StaticSelectView"
+        },
+        "EmberForm.FileUploadView": {
+            "name": "EmberForm.FileUploadView",
+            "shortname": "EmberForm.FileUploadView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/FileUploadView.js",
+            "line": 7,
+            "description": "Form item for a file upload input.",
+            "submodule": "ember-form-items",
+            "extends": "EmberForm.TextInputView"
+        },
+        "EmberForm.GroupRadioButtonView": {
+            "name": "EmberForm.GroupRadioButtonView",
+            "shortname": "EmberForm.GroupRadioButtonView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/GroupRadioButtonView.js",
+            "line": 6,
+            "description": "View for a group of radio buttons.",
+            "submodule": "ember-form-items",
+            "extends": "EmberForm.TextInputView"
+        },
+        "EmberForm.LabelView": {
+            "name": "EmberForm.LabelView",
+            "shortname": "EmberForm.LabelView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/LabelView.js",
+            "line": 4,
+            "description": "View to put a lable.",
+            "submodule": "ember-form-items",
+            "extends": "EmberForm.TextInputView"
+        },
+        "EmberForm.Legend": {
+            "name": "EmberForm.Legend",
+            "shortname": "EmberForm.Legend",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/LegendView.js",
+            "line": 4,
+            "description": "View for legend tag.",
+            "submodule": "ember-form-items",
+            "extends": "EmberForm.TextInputView"
+        },
+        "EmberForm.MultiEntryView": {
+            "name": "EmberForm.MultiEntryView",
+            "shortname": "EmberForm.MultiEntryView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/MultiEntryView.js",
+            "line": 9,
+            "description": "View for multiple rows of items.",
+            "submodule": "ember-form-items",
+            "extends": "EmberForm.TextInputView"
+        },
+        "EmberForm.MultiInputView": {
+            "name": "EmberForm.MultiInputView",
+            "shortname": "EmberForm.MultiInputView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/MultiInputView.js",
+            "line": 5,
+            "description": "View for multiple form items.",
+            "submodule": "ember-form-items",
+            "extends": "EmberForm.MultiColumnMixin"
+        },
+        "EmberForm.MultipleValue": {
+            "name": "EmberForm.MultipleValue",
+            "shortname": "EmberForm.MultipleValue",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/MultipleValue.js",
+            "line": 3,
+            "description": "Base for multiple value object.",
+            "submodule": "ember-form-items"
+        },
+        "EmberForm.MultipleValueMixin": {
+            "name": "EmberForm.MultipleValueMixin",
+            "shortname": "EmberForm.MultipleValueMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/MultipleValueMixin.js",
+            "line": 7,
+            "description": "Mixin which enables views to have multiple values.",
+            "submodule": "ember-form-items"
+        },
+        "EmberForm.RadioInputView": {
+            "name": "EmberForm.RadioInputView",
+            "shortname": "EmberForm.RadioInputView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/RadioInputView.js",
+            "line": 3,
+            "description": "Basic radio button view.",
+            "submodule": "ember-form-items"
+        },
+        "EmberForm.StaticSelectView": {
+            "name": "EmberForm.StaticSelectView",
+            "shortname": "EmberForm.StaticSelectView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/StaticSelectView.js",
+            "line": 4,
+            "description": "View for select tag with static options.",
+            "submodule": "ember-form-items",
+            "extends": "EmberForm.TextInputView"
+        },
+        "EmberForm.TextAreaView": {
+            "name": "EmberForm.TextAreaView",
+            "shortname": "EmberForm.TextAreaView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/TextAreaView.js",
+            "line": 4,
+            "description": "View for textarea.",
+            "submodule": "ember-form-items",
+            "extends": "EmberForm.TextInputView"
+        },
+        "EmberForm.TextInputView": {
+            "name": "EmberForm.TextInputView",
+            "shortname": "EmberForm.TextInputView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/TextInputView.js",
+            "line": 6,
+            "description": "Base input view - a text input view.",
+            "submodule": "ember-form-items"
+        },
+        "EmberForm.WrapperView": {
+            "name": "EmberForm.WrapperView",
+            "shortname": "EmberForm.WrapperView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/form-items/WrapperView.js",
+            "line": 5,
+            "description": "Extend this to add extra content before views like Form.MultiEntryView or Form.MultiInputView.",
+            "submodule": "ember-form-items"
+        },
+        "EmberForm.MultiColumnMixin": {
+            "name": "EmberForm.MultiColumnMixin",
+            "shortname": "EmberForm.MultiColumnMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ember-form",
+            "namespace": "",
+            "file": "addon/MultiColumnMixin.js",
+            "line": 4,
+            "description": "Mixin for views with multiple child view with column data."
+        }
+    },
+    "classitems": [
+        {
+            "file": "addon/form-column-data/DisableForColumn.js",
+            "line": 11,
+            "description": "Unique identification of the column to enable/disable",
+            "itemtype": "property",
+            "name": "name",
+            "type": "String",
+            "required": 1,
+            "class": "EmberForm.DisableForColumn",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/DisableForColumn.js",
+            "line": 20,
+            "description": "Value of the column for which to enable/disable.",
+            "itemtype": "property",
+            "name": "value",
+            "type": "String",
+            "required": 1,
+            "class": "EmberForm.DisableForColumn",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/DisableForColumn.js",
+            "line": 29,
+            "description": "Key Name in the record which returns the value. Used when multiple column refer to same key.",
+            "itemtype": "property",
+            "name": "keyName",
+            "type": "String",
+            "optional": 1,
+            "class": "EmberForm.DisableForColumn",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/DisableForColumn.js",
+            "line": 38,
+            "description": "Actual key to use in the record. Takes keyName if present. Defaults to name.",
+            "itemtype": "property",
+            "name": "keyName",
+            "type": "String",
+            "readonly": "",
+            "class": "EmberForm.DisableForColumn",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/DisableForColumn.js",
+            "line": 52,
+            "description": "Boolean to disable when value of listened column == value",
+            "itemtype": "property",
+            "name": "disable",
+            "type": "Boolean",
+            "default": "false",
+            "class": "EmberForm.DisableForColumn",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/DisableForColumn.js",
+            "line": 61,
+            "description": "Boolean to enable when value of listened column == value",
+            "itemtype": "property",
+            "name": "enable",
+            "type": "Boolean",
+            "default": "false",
+            "class": "EmberForm.DisableForColumn",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/FormColumnData.js",
+            "line": 15,
+            "description": "Placeholder text for the inputs.",
+            "itemtype": "property",
+            "name": "placeholder",
+            "type": "String",
+            "default": "null",
+            "class": "EmberForm.FormColumnData",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/FormColumnData.js",
+            "line": 24,
+            "description": "Actual placeholder used. It takes the placeholder if specified else defaults to ColumnData's label.",
+            "itemtype": "property",
+            "name": "placeholderActual",
+            "type": "String",
+            "readonly": "",
+            "class": "EmberForm.FormColumnData",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/FormColumnData.js",
+            "line": 41,
+            "description": "Form module type to use for this column.",
+            "itemtype": "property",
+            "name": "moduleType",
+            "type": "String",
+            "default": "\"textInput\"",
+            "class": "EmberForm.FormColumnData",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/FormColumnData.js",
+            "line": 50,
+            "description": "The view lookup string for the for module.",
+            "itemtype": "property",
+            "name": "formView",
+            "type": "String",
+            "readonly": "",
+            "class": "EmberForm.FormColumnData",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/FormColumnData.js",
+            "line": 63,
+            "description": "Boolean to say whether the input is readonly or not. The input will be disabled but shown.",
+            "itemtype": "property",
+            "name": "readonly",
+            "type": "Boolean",
+            "default": "false",
+            "class": "EmberForm.FormColumnData",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/FormColumnData.js",
+            "line": 72,
+            "description": "Boolean to say whether the input is mandatory or not. A star will be shown beside the label.\nMaking this true will also add a not empty entry in validations in the ColumnData.",
+            "itemtype": "property",
+            "name": "mandatory",
+            "type": "Boolean",
+            "default": "false",
+            "class": "EmberForm.FormColumnData",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/FormColumnData.js",
+            "line": 82,
+            "description": "A question mark icon is shown beside the form input which will show helpText on hover.",
+            "itemtype": "property",
+            "name": "helpText",
+            "type": "String",
+            "default": "null",
+            "class": "EmberForm.FormColumnData",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/FormColumnDataGroup.js",
+            "line": 11,
+            "description": "Label width class default for all child columns.",
+            "itemtype": "property",
+            "name": "labelWidthClass",
+            "type": "String",
+            "default": "\"col-sm-4\"",
+            "class": "EmberForm.FormColumnDataGroup",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/FormColumnDataGroup.js",
+            "line": 20,
+            "description": "Input width class default for all child columns.",
+            "itemtype": "property",
+            "name": "inputWidthClass",
+            "type": "String",
+            "default": "\"col-sm-8\"",
+            "class": "EmberForm.FormColumnDataGroup",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/FormColumnDataGroup.js",
+            "line": 29,
+            "itemtype": "property",
+            "name": "showLabel",
+            "type": "Boolean",
+            "default": "true",
+            "class": "EmberForm.FormColumnDataGroup",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/HideForColumn.js",
+            "line": 11,
+            "description": "Unique identification of the column to show/hide",
+            "itemtype": "property",
+            "name": "name",
+            "type": "String",
+            "required": 1,
+            "class": "EmberForm.HideForColumn",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/HideForColumn.js",
+            "line": 20,
+            "description": "Value of the column for which to show/hide.",
+            "itemtype": "property",
+            "name": "value",
+            "type": "String",
+            "required": 1,
+            "class": "EmberForm.HideForColumn",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/HideForColumn.js",
+            "line": 29,
+            "description": "Key Name in the record which returns the value. Used when multiple column refer to same key.",
+            "itemtype": "property",
+            "name": "keyName",
+            "type": "String",
+            "optional": 1,
+            "class": "EmberForm.HideForColumn",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/HideForColumn.js",
+            "line": 38,
+            "description": "Actual key to use in the record. Takes keyName if present. Defaults to name.",
+            "itemtype": "property",
+            "name": "keyName",
+            "type": "String",
+            "readonly": "",
+            "class": "EmberForm.HideForColumn",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/HideForColumn.js",
+            "line": 52,
+            "description": "Boolean to hide when value of listened column == value",
+            "itemtype": "property",
+            "name": "hide",
+            "type": "Boolean",
+            "default": "false",
+            "class": "EmberForm.HideForColumn",
+            "module": "ember-form"
+        },
+        {
+            "file": "addon/form-column-data/HideForColumn.js",
+            "line": 61,
+            "description": "Boolean to show when value of listened column == value",
+            "itemtype": "property",
+            "name": "show",
+            "type": "Boolean",
+            "default": "false",
+            "class": "EmberForm.HideForColumn",
+            "module": "ember-form"
+        }
+    ],
+    "warnings": []
+}

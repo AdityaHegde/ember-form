@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>EmberForm.FormColumnData - ember-form</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+	    <img alt="ember-form" src="../assets/css/logo.png" style="max-height: 65%;" title="ember-form">
+            ember-form
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>1.0.0.f81fbd31</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/EmberForm.CheckBoxView", "classes/EmberForm.DisableForColumn", "classes/EmberForm.DynamicMultiSelectView", "classes/EmberForm.DynamicSelectView", "classes/EmberForm.FileUploadView", "classes/EmberForm.FormColumnData", "classes/EmberForm.FormColumnDataGroup", "classes/EmberForm.FormComponent", "classes/EmberForm.GroupRadioButtonView", "classes/EmberForm.HideForColumn", "classes/EmberForm.LabelView", "classes/EmberForm.Legend", "classes/EmberForm.MultiColumnMixin", "classes/EmberForm.MultiEntryView", "classes/EmberForm.MultiInputView", "classes/EmberForm.MultipleValue", "classes/EmberForm.MultipleValueMixin", "classes/EmberForm.RadioInputView", "classes/EmberForm.StaticSelectView", "classes/EmberForm.TextAreaView", "classes/EmberForm.TextInputView", "classes/EmberForm.WrapperView", "modules/ember-form", "modules/ember-form-column-data", "modules/ember-form-items"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <h3>APIs</h3>
+	        <div id="sidebar">
+	            <ul id="main-nav" class="nav nav-tabs" style="margin-bottom:0;">
+	                <li class="active"><a href="#classes" data-toggle="tab">Classes</a></li>
+	                <li><a href="#modules" data-toggle="tab">Modules</a></li>
+	            </ul>
+	    
+	            <div id="api-tabview-filter">
+	                <input type="search" placeholder="Type to filter APIs">
+	            </div>
+	    
+	            <div class="tab-content" style="border: 1px solid #DDD; border-top:0;">
+	                <div class="tab-pane active" id="classes">
+	                    <ul id="api-classes" class="nav nav-list">
+	                            <li><a href="../classes/EmberForm.CheckBoxView.html">EmberForm.CheckBoxView</a></li>
+	                            <li><a href="../classes/EmberForm.DisableForColumn.html">EmberForm.DisableForColumn</a></li>
+	                            <li><a href="../classes/EmberForm.DynamicMultiSelectView.html">EmberForm.DynamicMultiSelectView</a></li>
+	                            <li><a href="../classes/EmberForm.DynamicSelectView.html">EmberForm.DynamicSelectView</a></li>
+	                            <li><a href="../classes/EmberForm.FileUploadView.html">EmberForm.FileUploadView</a></li>
+	                            <li><a href="../classes/EmberForm.FormColumnData.html">EmberForm.FormColumnData</a></li>
+	                            <li><a href="../classes/EmberForm.FormColumnDataGroup.html">EmberForm.FormColumnDataGroup</a></li>
+	                            <li><a href="../classes/EmberForm.FormComponent.html">EmberForm.FormComponent</a></li>
+	                            <li><a href="../classes/EmberForm.GroupRadioButtonView.html">EmberForm.GroupRadioButtonView</a></li>
+	                            <li><a href="../classes/EmberForm.HideForColumn.html">EmberForm.HideForColumn</a></li>
+	                            <li><a href="../classes/EmberForm.LabelView.html">EmberForm.LabelView</a></li>
+	                            <li><a href="../classes/EmberForm.Legend.html">EmberForm.Legend</a></li>
+	                            <li><a href="../classes/EmberForm.MultiColumnMixin.html">EmberForm.MultiColumnMixin</a></li>
+	                            <li><a href="../classes/EmberForm.MultiEntryView.html">EmberForm.MultiEntryView</a></li>
+	                            <li><a href="../classes/EmberForm.MultiInputView.html">EmberForm.MultiInputView</a></li>
+	                            <li><a href="../classes/EmberForm.MultipleValue.html">EmberForm.MultipleValue</a></li>
+	                            <li><a href="../classes/EmberForm.MultipleValueMixin.html">EmberForm.MultipleValueMixin</a></li>
+	                            <li><a href="../classes/EmberForm.RadioInputView.html">EmberForm.RadioInputView</a></li>
+	                            <li><a href="../classes/EmberForm.StaticSelectView.html">EmberForm.StaticSelectView</a></li>
+	                            <li><a href="../classes/EmberForm.TextAreaView.html">EmberForm.TextAreaView</a></li>
+	                            <li><a href="../classes/EmberForm.TextInputView.html">EmberForm.TextInputView</a></li>
+	                            <li><a href="../classes/EmberForm.WrapperView.html">EmberForm.WrapperView</a></li>
+	                    </ul>
+	                </div>
+	    
+	                <div class="tab-pane" id="modules">
+	                    <ul id="api-modules" class="nav nav-list">
+	                            <li><a href="../modules/ember-form.html">ember-form</a></li>
+	                            <li><a href="../modules/ember-form-column-data.html">ember-form-column-data</a></li>
+	                            <li><a href="../modules/ember-form-items.html">ember-form-items</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <div class="page-header">
+                            <h1>EmberForm.FormColumnData <small>Class</small></h1>
+                        </div>
+                        
+                        <div class="well well-small">
+                        
+                        
+                                <div class="foundat">
+                                    Defined in: <a href="../files/addon_form-column-data_FormColumnData.js.html#l7"><code>addon&#x2F;form-column-data&#x2F;FormColumnData.js:7</code></a>
+                                </div>
+                        
+                                    Module: <a href="../modules/ember-form-column-data.html">ember-form-column-data</a><br>
+                                    Parent Module: <a href="../modules/ember-form.html">ember-form</a>
+                        
+                        </div>
+                        
+                        
+                        <div class="well well-small">
+                            <p>Column data for form module.</p>
+                        
+                        </div>
+                        
+                        
+                        <div>
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#index">Index</a></li>
+                        
+                                    <li><a data-toggle="tab" href="#properties">Properties</a></li>
+                            </ul>
+                        
+                            <div class="tab-content">
+                                <div id="index" class="tab-pane active">
+                                    <h2 class="off-left">Item Index</h2>
+                        
+                        
+                                        <div class="index-section properties">
+                                            <h3>Properties</h3>
+                        
+                                            <ul class="index-list properties">
+                                                    <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_formView" data-tablink="formView">formView</a>
+                        
+                                                    </li>
+                                                    <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_helpText" data-tablink="helpText">helpText</a>
+                        
+                                                    </li>
+                                                    <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_mandatory" data-tablink="mandatory">mandatory</a>
+                        
+                                                    </li>
+                                                    <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_moduleType" data-tablink="moduleType">moduleType</a>
+                        
+                                                    </li>
+                                                    <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_placeholder" data-tablink="placeholder">placeholder</a>
+                        
+                                                    </li>
+                                                    <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_placeholderActual" data-tablink="placeholderActual">placeholderActual</a>
+                        
+                                                    </li>
+                                                    <li class="index-item property">
+                                                        <a href="#" data-tabid="#properties" data-anchor="#property_readonly" data-tablink="readonly">readonly</a>
+                        
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        
+                        
+                                </div>
+                        
+                        
+                                    <div id="properties" class="tab-pane">
+                                        <h2 class="off-left">Properties</h2>
+                        
+                                            <div id="property_formView" class="property item">
+                                                <h3 class="name"><code>formView</code></h3>
+                                                <span class="type">String</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                                <p>Provided by the <a href="../modules/ember-form.html">ember-form</a> module.</p>
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/addon_form-column-data_FormColumnData.js.html#l50"><code>addon&#x2F;form-column-data&#x2F;FormColumnData.js:50</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>The view lookup string for the for module.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="property_helpText" class="property item">
+                                                <h3 class="name"><code>helpText</code></h3>
+                                                <span class="type">String</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                                <p>Provided by the <a href="../modules/ember-form.html">ember-form</a> module.</p>
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/addon_form-column-data_FormColumnData.js.html#l82"><code>addon&#x2F;form-column-data&#x2F;FormColumnData.js:82</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>A question mark icon is shown beside the form input which will show helpText on hover.</p>
+                                            
+                                                </div>
+                                            
+                                                    <p><strong>Default:</strong> null</p>
+                                            
+                                            
+                                            </div>
+                                            <div id="property_mandatory" class="property item">
+                                                <h3 class="name"><code>mandatory</code></h3>
+                                                <span class="type">Boolean</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                                <p>Provided by the <a href="../modules/ember-form.html">ember-form</a> module.</p>
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/addon_form-column-data_FormColumnData.js.html#l72"><code>addon&#x2F;form-column-data&#x2F;FormColumnData.js:72</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Boolean to say whether the input is mandatory or not. A star will be shown beside the label.
+                                            Making this true will also add a not empty entry in validations in the ColumnData.</p>
+                                            
+                                                </div>
+                                            
+                                                    <p><strong>Default:</strong> false</p>
+                                            
+                                            
+                                            </div>
+                                            <div id="property_moduleType" class="property item">
+                                                <h3 class="name"><code>moduleType</code></h3>
+                                                <span class="type">String</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                                <p>Provided by the <a href="../modules/ember-form.html">ember-form</a> module.</p>
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/addon_form-column-data_FormColumnData.js.html#l41"><code>addon&#x2F;form-column-data&#x2F;FormColumnData.js:41</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Form module type to use for this column.</p>
+                                            
+                                                </div>
+                                            
+                                                    <p><strong>Default:</strong> &quot;textInput&quot;</p>
+                                            
+                                            
+                                            </div>
+                                            <div id="property_placeholder" class="property item">
+                                                <h3 class="name"><code>placeholder</code></h3>
+                                                <span class="type">String</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                                <p>Provided by the <a href="../modules/ember-form.html">ember-form</a> module.</p>
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/addon_form-column-data_FormColumnData.js.html#l15"><code>addon&#x2F;form-column-data&#x2F;FormColumnData.js:15</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Placeholder text for the inputs.</p>
+                                            
+                                                </div>
+                                            
+                                                    <p><strong>Default:</strong> null</p>
+                                            
+                                            
+                                            </div>
+                                            <div id="property_placeholderActual" class="property item">
+                                                <h3 class="name"><code>placeholderActual</code></h3>
+                                                <span class="type">String</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                                <p>Provided by the <a href="../modules/ember-form.html">ember-form</a> module.</p>
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/addon_form-column-data_FormColumnData.js.html#l24"><code>addon&#x2F;form-column-data&#x2F;FormColumnData.js:24</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Actual placeholder used. It takes the placeholder if specified else defaults to ColumnData's label.</p>
+                                            
+                                                </div>
+                                            
+                                            
+                                            
+                                            </div>
+                                            <div id="property_readonly" class="property item">
+                                                <h3 class="name"><code>readonly</code></h3>
+                                                <span class="type">Boolean</span>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="meta">
+                                                                <p>Provided by the <a href="../modules/ember-form.html">ember-form</a> module.</p>
+                                                            <p>
+                                                            Defined in
+                                                    <a href="../files/addon_form-column-data_FormColumnData.js.html#l63"><code>addon&#x2F;form-column-data&#x2F;FormColumnData.js:63</code></a>
+                                                    </p>
+                                            
+                                            
+                                                </div>
+                                            
+                                                <div class="description">
+                                                    <p>Boolean to say whether the input is readonly or not. The input will be disabled but shown.</p>
+                                            
+                                                </div>
+                                            
+                                                    <p><strong>Default:</strong> false</p>
+                                            
+                                            
+                                            </div>
+                                    </div>
+                        
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>
