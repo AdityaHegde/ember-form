@@ -1,6 +1,6 @@
-# Ember-form
+# ember-form
 
-This README outlines the details of collaborating on this Ember addon.
+Docs : http://adityahegde.github.io/ember-form/
 
 ## Installation
 

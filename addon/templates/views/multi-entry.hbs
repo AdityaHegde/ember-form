@@ -1,0 +1,24 @@
+<div class="{{{view.columnData.form.multiEntryContainerClass}}}">
+{{#each view.value as |value|}}
+  <div class="{{{view.columnData.form.eachMultiEntryClass}}}">
+    <div class="{{{view.columnData.form.multiEntryClass}}}">
+      {{view view.childView record=value columnData=view.columnData.childCol parentForm=view showLabel=view.columnData.form.showChildrenLabel immediateParent=view}}
+    </div>
+    {{#if view.columnData.form.canManipulateEntries}}
+      <div class="remove-entry" rel="tooltip" title="Delete Condition"><a {{action "deleteEntry" value target="view"}}>
+        <span class="glyphicon glyphicon-trash"></span>
+      </a></div>
+      <div class="add-entry" rel="tooltip" title="Add Condition"> <a {{action "addEntry" target="view"}}>
+        <span class="glyphicon glyphicon-plus"></span>
+      </a></div>
+    {{/if}}
+  </div>
+{{else}}
+  {{#if view.columnData.form.canManipulateEntries}}
+    <div class="add-first-entry" rel="tooltip" title="Add Condition"> <a {{action "addEntry" target="view"}}>
+      <span class="glyphicon glyphicon-plus"></span>
+    </a></div>
+  {{/if}}
+{{/each}}
+</div>
+<p class="tp-rules-end-msg">{{view.columnData.form.postInputText}}</p>

@@ -1,0 +1,125 @@
+import Ember from "ember";
+import EmberColumnData from "ember-column-data";
+import layout from "../templates/views/text-input-l";
+import template from "../templates/views/text-input-t";
+
+/**
+ * Base input view - a text input view.
+ *
+ * @class EmberForm.TextInputView
+ * @module ember-form
+ * @submodule ember-form-items
+ */
+export default Ember.View.extend(EmberColumnData.ColumnDataValueMixin, {
+  parentForm : null,
+  immediateParent : null,
+  parentForBubbling : Ember.computed.alias("parentForm"),
+
+  layout : layout,
+  template : template,
+
+  classNames : ["form-group"],
+  classNameBindings : ["columnData.form.additionalClass", "columnData.validation.validations:has-validations", "invalid:has-error", ":has-feedback", "hidden:hidden"],
+  attributeBindings : ["colName:data-column-name"],
+
+  //attributeBindings doesnt support "." for getting value as of now (ember1.13)
+  colName : Ember.computed.alias("columnData.name"),
+
+  labelWidthClass : "col-full",
+  inputWidthClass : "col-sm-8",
+  showLabel : true,
+
+  labelClass : Ember.computed("view.columnData", "view.labelWidthClass", {
+    get : function() {
+      var columnData = this.get("columnData"), labelWidthClass = this.get("labelWidthClass");
+      return "control-label "+(columnData.labelWidthClass || labelWidthClass);
+    },
+  }),
+
+  inputClass : Ember.computed("view.columnData", "view.inputWidthClass", {
+    get : function() {
+      var columnData = this.get("columnData"), inputWidthClass = this.get("inputWidthClass");
+      return "control-input "+(columnData.inputWidthClass || inputWidthClass);
+    },
+  }),
+
+  isDisabled : Ember.computed("view.columnData", "view.columnData.form.readonly", "view.columnData.form.readonlyOnEdit", "view.columnData.form.readonlyOnNew", {
+    get : function() {
+      var columnData = this.get("columnData"),record = this.get("record");
+      this.notifyPropertyChange("value");
+      return columnData.get("form.readonly") || 
+             ((columnData.get("form.readonlyOnEdit") && record && !record.get("isNew")) || (columnData.get("form.readonlyOnNew") && record && record.get("isNew"))) ||
+             this.get("disabled");
+    },
+  }),
+
+  disabled : false,
+  disableCheck : function(changedCol, changedValue) {
+    var columnData = this.get("columnData"), record = this.get("record"),
+        disableEntry = columnData.get("form.disableForColumns") && columnData.get("form.disableForColumns").findBy("name", changedCol.get("name"));
+    changedValue = changedValue || record.get(changedCol.get("key"));
+    if(disableEntry) {
+      var eq = disableEntry.value === changedValue, dis = disableEntry.disable, en = disableEntry.enable;
+      this.set("disabled", (dis && eq) || (en && !eq));
+    }
+  },
+  disableCheckInit : function() {
+    var disableForColumns = this.get("columnData.form.disableForColumns");
+    if(disableForColumns) {
+      for(var i = 0; i < disableForColumns.length; i++) {
+        this.disableCheck(disableForColumns[i], this.get("record."+disableForColumns[i].get("key")));
+      }
+    }
+  },
+
+  showLabelComp : Ember.computed("showLabel", "view.columnData", {
+    get : function() {
+      var columnData = this.get("columnData");
+      if(columnData.showLabel === undefined ) {
+        return this.get("showLabel");
+      }
+      return this.get("showLabel") && columnData.showLabel;
+    },
+  }),
+
+  invalid : false,
+  invalidReason : false,
+
+  hidden : false,
+  hideCheck : function(changedCol, changedValue) {
+    var columnData = this.get("columnData"), record = this.get("record"),
+        hideEntry = columnData.get("form.hideForColumns") && columnData.get("form.hideForColumns").findBy("name", changedCol.get("name"));
+    changedValue = changedValue || record.get(changedCol.get("key"));
+    if(hideEntry) {
+      var eq = hideEntry.value === changedValue, hide = hideEntry.hide, show = hideEntry.show;
+      this.set("hidden", (hide && eq) || (show && !eq));
+    }
+  },
+  hideCheckInit : function() {
+    var hideForColumns = this.get("columnData.form.hideForColumns");
+    if(hideForColumns) {
+      for(var i = 0; i < hideForColumns.length; i++) {
+        this.hideCheck(hideForColumns[i], this.get("record."+hideForColumns[i].get("key")));
+      }
+    }
+  },
+  disableValidation : Ember.computed.alias("hidden"),
+
+  listenedColumnChangedHook : function(changedCol, changedValue/*, oldValue*/) {
+    this.hideCheck(changedCol, changedValue);
+    this.disableCheck(changedCol, changedValue);
+  },
+
+  valueDidChange : function(/*value*/) {
+  },
+
+  prevRecord : null,
+  recordChangeHook : function() {
+    this.notifyPropertyChange("isDisabled");
+    this.hideCheckInit();
+    this.disableCheckInit();
+  },
+  recordRemovedHook : function(){
+  },
+  title : "test",
+});

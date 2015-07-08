@@ -1,0 +1,5 @@
+{{#each view.filteredCols as |columnData|}}
+  {{view columnData.form.formView record=view.record columnData=columnData labelWidthClass=view.columnDataGroup.form.labelWidthClass
+     inputWidthClass=view.columnDataGroup.form.inputWidthClass tagName=view.columnDataGroup.form.tagName
+     showLabel=view.columnDataGroup.form.showLabel parentForm=view.parentForRows immediateParent=view}}
+{{/each}}

@@ -1,0 +1,14 @@
+{
+  "name": "ember-form",
+  "description": "Ember form module with flexible dynamic inputs.",
+  "version": "1.0.0",
+  "options": {
+    "paths": [
+      "addon"
+    ],
+    "exclude": "vendor",
+    "outdir": "docs",
+    "themedir": "node_modules/yuidoc-bootstrap-theme",
+    "helpers": ["node_modules/yuidoc-bootstrap-theme/helpers/helpers.js"]
+  }
+}
