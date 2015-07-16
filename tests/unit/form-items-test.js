@@ -7,6 +7,7 @@ import getColumnSelector from "../helpers/getColumnSelector";
 
 Ember.run(function() {
   window.GlobalData = Ember.Namespace.create();
+  EmberFrom.get("EmberForm");
 });
 
 moduleForComponent("ember-form", "Ember Form", {
@@ -19,16 +20,17 @@ moduleForComponent("ember-form", "Ember Form", {
   },
 
   needs : [
-    "view:emberFormTextInput",
-    "view:emberFormCheckBox",
-    "view:emberFormStaticSelect",
-    "view:emberFormDynamicSelect",
-    "view:emberFormDynamicMultiSelect",
-    "view:emberFormFileUpload",
-    "view:emberFormRadioInput",
-    "view:emberFormGroupRadioButton",
-    "view:emberFormMultiEntry",
-    "view:emberFormMultiInput",
+    "component:ember-form-checkbox-input",
+    "component:ember-form-item",
+    "component:ember-form-legend",
+    "component:ember-form-multi-input",
+    "component:ember-form-radio-input",
+    "component:ember-form-text-input",
+    "component:ember-form-file-input",
+    "component:ember-form-label",
+    "component:ember-form-multi-entry",
+    "component:ember-form-radio-group-input",
+    "component:ember-form-select-input",
   ],
 });
 
@@ -110,7 +112,7 @@ test("Test check box component", function(assert) {
     columns : [{
       name : "vara",
       label : "Vara",
-      form : {moduleType : "checkBox"},
+      form : {moduleType : "checkbox"},
     }],
     form : {},
   }));
@@ -137,11 +139,11 @@ test("Test static select component", function(assert) {
       name : "vara",
       label : "Vara",
       form : {
-        moduleType : "staticSelect",
+        moduleType : "select",
         options : [
-          {val : "v0", label : "l0"},
-          {val : "v1", label : "l1"},
-          {val : "v2", label : "l2"},
+          {value : "v0", label : "l0"},
+          {value : "v1", label : "l1"},
+          {value : "v2", label : "l2"},
         ],
         prompt : "Select",
       },
@@ -165,7 +167,7 @@ test("Test static select component", function(assert) {
 test("Test dynamic select component", function(assert) {
   Ember.run(function() {
     window.GlobalData.set("data", Ember.A([
-      Ember.Object.create({data_val : "v0", data_label : "l0"}),
+      Ember.Object.create({data_value : "v0", data_label : "l0"}),
     ]));
   });
   initForm(assert, this.subject(), Ember.Object.create({vara : ""}), EmberColumnData.ColumnDataGroup.create({
@@ -174,7 +176,7 @@ test("Test dynamic select component", function(assert) {
       name : "vara",
       label : "Vara",
       form : {
-        moduleType : "dynamicSelect",
+        moduleType : "select",
         dataPath : "GlobalData.data",
         dataValCol : "data_val",
         dataLabelCol : "data_label",
@@ -195,7 +197,7 @@ test("Test dynamic select component", function(assert) {
   andThen(function() {
     assert.equal(assert.form.get("record.vara"), "v0", "Value of vara is 'v0', after selecting 'l0'");
 
-    window.GlobalData.get("data").pushObject(Ember.Object.create({data_val : "v1", data_label : "l1"}));
+    window.GlobalData.get("data").pushObject(Ember.Object.create({data_value : "v1", data_label : "l1"}));
   });
 
   wait();
@@ -219,9 +221,9 @@ test("Test dynamic select component", function(assert) {
     assert.equal(assert.form.get("record.vara"), "v0", "Value of vara is 'v0' after modifying record directly");
 
     window.GlobalData.set("data", Ember.A([
-      Ember.Object.create({data_val : "v0", data_label : "l0"}),
-      Ember.Object.create({data_val : "v1", data_label : "l1"}),
-      Ember.Object.create({data_val : "v2", data_label : "l2"}),
+      Ember.Object.create({data_value : "v0", data_label : "l0"}),
+      Ember.Object.create({data_value : "v1", data_label : "l1"}),
+      Ember.Object.create({data_value : "v2", data_label : "l2"}),
     ]));
   });
 
@@ -232,8 +234,8 @@ test("Test dynamic select component", function(assert) {
     assert.equal(assert.form.get("record.vara"), "v0", "Value of vara is 'v0' after modifying options directly");
 
     window.GlobalData.set("data", Ember.A([
-      Ember.Object.create({data_val : "v1", data_label : "l1"}),
-      Ember.Object.create({data_val : "v2", data_label : "l2"}),
+      Ember.Object.create({data_value : "v1", data_label : "l1"}),
+      Ember.Object.create({data_value : "v2", data_label : "l2"}),
     ]));
   });
 
@@ -248,28 +250,28 @@ test("Test dynamic select component", function(assert) {
 test("Test dynamic select component with registry", function(assert) {
   Ember.run(function() {
     window.GlobalData.set("data", Ember.A([
-      Ember.Object.create({data_val : "v0", data_label : "l0"}),
+      Ember.Object.create({data_value : "v0", data_label : "l0"}),
     ]));
     window.GlobalData.set("dataRegistry", {
       v0 : {
         values : Ember.A([
-          Ember.Object.create({data_val : "v00", data_label : "l00"}),
-          Ember.Object.create({data_val : "v01", data_label : "l01"}),
+          Ember.Object.create({data_value : "v00", data_label : "l00"}),
+          Ember.Object.create({data_value : "v01", data_label : "l01"}),
         ]),
         "default" : "v00",
       },
       v1 : {
         values : Ember.A([
-          Ember.Object.create({data_val : "v10", data_label : "l10"}),
-          Ember.Object.create({data_val : "v11", data_label : "l11"}),
+          Ember.Object.create({data_value : "v10", data_label : "l10"}),
+          Ember.Object.create({data_value : "v11", data_label : "l11"}),
         ]),
         "default" : "v10",
       },
       v2 : {
         values : Ember.A([
-          Ember.Object.create({data_val : "v20", data_label : "l20"}),
-          Ember.Object.create({data_val : "v21", data_label : "l21"}),
-          Ember.Object.create({data_val : "v22", data_label : "l22"}),
+          Ember.Object.create({data_value : "v20", data_label : "l20"}),
+          Ember.Object.create({data_value : "v21", data_label : "l21"}),
+          Ember.Object.create({data_value : "v22", data_label : "l22"}),
         ]),
       },
     });
@@ -280,11 +282,11 @@ test("Test dynamic select component with registry", function(assert) {
       name : "vara",
       label : "Vara",
       form : {
-        moduleType : "staticSelect",
+        moduleType : "select",
         options : [
-          {val : "v0", label : "l0"},
-          {val : "v1", label : "l1"},
-          {val : "v2", label : "l2"},
+          {value : "v0", label : "l0"},
+          {value : "v1", label : "l1"},
+          {value : "v2", label : "l2"},
         ],
         prompt : "Select",
       },
@@ -292,7 +294,7 @@ test("Test dynamic select component with registry", function(assert) {
       name : "varb",
       label : "Varb",
       form : {
-        moduleType : "dynamicSelect",
+        moduleType : "select",
         dataPath : "record.vara",
         dataValCol : "data_val",
         dataLabelCol : "data_label",
@@ -332,96 +334,6 @@ test("Test dynamic select component with registry", function(assert) {
   });
 });
 
-test("Test dynamic multi select component", function(assert) {
-  Ember.run(function() {
-    window.GlobalData.set("data", Ember.A([
-      Ember.Object.create({data_val : "v0", data_label : "l0"}),
-      Ember.Object.create({data_val : "v1", data_label : "l1"}),
-      Ember.Object.create({data_val : "v2", data_label : "l2"}),
-    ]));
-  });
-  initForm(assert, this.subject(), Ember.Object.create({vara : "test", varb : "test_varb", varc : Ember.A()}), EmberColumnData.ColumnDataGroup.create({
-    name : "formTest",
-    columns : [{
-      name : "varc",
-      label : "VarC",
-      form : {
-        moduleType : "dynamicMultiSelect",
-        dataPath : "GlobalData.data",
-        dataValCol : "data_val",
-        dataLabelCol : "data_label",
-        arrayCol : "vara",
-        arrayType : Ember.Object,
-        copyAttrs : {
-          varb : "varb",
-        },
-        staticAttrs : {
-          varc : "varc_static",
-        },
-        valAttrs : {
-          label : "vard",
-          val : "vara",
-        },
-        eachValidations : [
-          {type : 0},
-        ],
-      },
-    }],
-    form : {},
-  }));
-
-  wait();
-
-  andThen(function() {
-    fillFormElement("varc", "select", ["v0", "v1"]);
-  });
-
-  wait();
-
-  andThen(function() {
-    assert.equal(assert.form.get("record.varc.0.vara"), "v0",          "'vara' of 1st element is 'v0'");
-    assert.equal(assert.form.get("record.varc.0.varb"), "test_varb",   "'varb' of 1st element is 'test_varb' copied from 'record'");
-    assert.equal(assert.form.get("record.varc.0.varc"), "varc_static", "'varc' of 1st element is 'varc_static' assigned a static value");
-    assert.equal(assert.form.get("record.varc.0.vard"), "l0",          "'vard' of 1st element is 'l0' copied from 'label' of selected value from dynamic select");
-    assert.equal(assert.form.get("record.varc.1.vara"), "v1",          "'vara' of 2nd element is 'v1'");
-    assert.equal(assert.form.get("record.varc.1.varb"), "test_varb",   "'varb' of 2nd element is 'test_varb' copied from 'record'");
-    assert.equal(assert.form.get("record.varc.1.varc"), "varc_static", "'varc' of 2nd element is 'varc_static' assigned a static value");
-    assert.equal(assert.form.get("record.varc.1.vard"), "l1",          "'vard' of 2nd element is 'l1' copied from 'label' of selected value from dynamic select");
-
-    assert.form.get("record.varc").popObject();
-  });
-
-  wait();
-
-  andThen(function() {
-    assert.deepEqual(assert.form.get("childViews.0.selection.length"), 1, "selection was updated when value associated was directly updated");
-    assert.deepEqual(assert.form.get("childViews.0.selection.0.val"), "v0", "selection was updated when value associated was directly updated");
-
-    window.GlobalData.set("data", Ember.A([
-      Ember.Object.create({data_val : "v0", data_label : "l0"}),
-    ]));
-  });
-
-  wait();
-
-  andThen(function() {
-    assert.deepEqual(assert.form.get("childViews.0.selection.length"), 1, "selection was retained when options was updated");
-    assert.deepEqual(assert.form.get("childViews.0.selection.0.val"), "v0", "selection was updated when value associated was directly updated");
-    assert.equal(assert.form.get("record.varc.length"), 1, "record value was retained when options was updated");
-
-    window.GlobalData.set("data", Ember.A([
-      Ember.Object.create({data_val : "v1", data_label : "l1"}),
-    ]));
-  });
-
-  wait();
-
-  andThen(function() {
-    assert.deepEqual(assert.form.get("childViews.0.selection.length"), 0, "selection was emptied when options without the selected was updated");
-    assert.equal(assert.form.get("record.varc.length"), 0, "record value was emptied when options without the selected was updated");
-  });
-});
-
 test("Test file upload", function(assert) {
   initForm(assert, this.subject(), Ember.Object.create(), EmberColumnData.ColumnDataGroup.create({
     name : "formTest",
@@ -429,10 +341,15 @@ test("Test file upload", function(assert) {
       name : "vara",
       label : "Vara",
       form : {
-        moduleType : "fileUpload",
+        moduleType : "fileInput",
         accept : ".csv, .txt, text/csv, text/plain",
         method : "ReadFileAsText",
-        maxSize : 15,
+        fileValidation : {
+          validations : [
+            {type : 6, maxSize : 15},
+            {type : 7, typesMap : { "text/plain" : 1 } },
+          ],
+        },
       },
       validation : {
         validations : Ember.A(),
@@ -473,11 +390,11 @@ test("Test radio buttons component", function(assert) {
       name : "vara",
       label : "Vara",
       form : {
-        moduleType : "groupRadioButton",
+        moduleType : "radioGroup",
         options : [
-          {val : "v0", label : "l0"},
-          {val : "v1", label : "l1"},
-          {val : "v2", label : "l2"},
+          {value : "v0", label : "l0"},
+          {value : "v1", label : "l1"},
+          {value : "v2", label : "l2"},
         ],
       },
       validation : {
@@ -542,12 +459,12 @@ test("Multi entry with Multi input", function(assert) {
           label : "vard",
         },
       },
-      childCol : {
+      childColumnData : {
         name : "test",
         form : {
           moduleType : "multiInput",
         },
-        childColGroup : {
+        childColumnDataGroup : {
           name : "test",
           columns : [{
             name : "vara",
@@ -566,11 +483,11 @@ test("Multi entry with Multi input", function(assert) {
             name : "varb",
             label : "VarB",
             form : {
-              moduleType : "staticSelect",
+              moduleType : "select",
               options : [
-                {val : "vb0", label : "lb0"},
-                {val : "vb1", label : "lb1"},
-                {val : "vb2", label : "lb2"},
+                {value : "vb0", label : "lb0"},
+                {value : "vb1", label : "lb1"},
+                {value : "vb2", label : "lb2"},
               ],
             },
           }],
@@ -618,11 +535,11 @@ test("hideForColumns and disableForColumns", function(assert) {
       name : "vara",
       label : "VarA",
       form : {
-        moduleType : "staticSelect",
+        moduleType : "select",
         options : [
-          {val : "va0", label : "la0"},
-          {val : "va1", label : "la1"},
-          {val : "va2", label : "la2"},
+          {value : "va0", label : "la0"},
+          {value : "va1", label : "la1"},
+          {value : "va2", label : "la2"},
         ],
       },
     }, {

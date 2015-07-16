@@ -1,14 +1,14 @@
 import Ember from "ember";
 import EmberColumnData from "ember-column-data";
-import MultiColumnMixin from "../MultiColumnMixin";
+import MultiColumnMixin from "../mixins/multi-column";
 
 /**
- * Base form view.
+ * Base form component.
  * Usage:
  *
  *     {{ember-form record=record columnDataGroup=columnDataGroup}}
  *
- * @class EmberForm.FormComponent
+ * @class EmberForm.EmberForm
  */
 export default Ember.Component.extend(MultiColumnMixin, EmberColumnData.ColumnDataChangeCollectorMixin, {
   childTagNames : 'div',

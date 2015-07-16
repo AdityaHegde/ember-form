@@ -5,13 +5,13 @@
  */
 
 import Ember from "ember";
-import MultiColumnMixin from "./MultiColumnMixin";
-import FormColumnData from "./form-column-data/index";
-import FormItems from "./form-items/index";
+import MultiColumnMixin from "./mixins/multi-column";
+import FormColumnData from "./column-data/index";
+import Validations from "./column-data/validations/index";
 
 var
 EmberForm = Ember.Namespace.create(),
-formModules = [FormItems, FormColumnData];
+formModules = [FormColumnData, Validations];
 window.EmberForm = EmberForm;
 
 EmberForm.MultiColumnMixin = MultiColumnMixin;

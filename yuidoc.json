@@ -1,7 +1,7 @@
 {
   "name": "ember-form",
   "description": "Ember form module with flexible dynamic inputs.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "options": {
     "paths": [
       "addon"

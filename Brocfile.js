@@ -12,8 +12,5 @@ var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 */
 
 var app = new EmberAddon();
-app.import("bower_components/bootstrap/dist/css/bootstrap.css");
-//User will have to manually load the appropriate theme
-//app.import("bower_components/bootstrap/dist/css/bootstrap-theme.css");
 
 module.exports = app.toTree();

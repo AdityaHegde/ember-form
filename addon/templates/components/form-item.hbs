@@ -1,0 +1,27 @@
+{{#if showLabelComp}}
+  <div class={{labelClass}} >
+    <label for={{columnData.name}}>{{#if columnData.label}}{{columnData.label}}{{if columnData.form.mandatory "*"}}{{/if}}</label>
+    {{#if columnData.form.helpText}}
+      <div class="label-tooltip">
+        {{#tool-tip placement="right" title=columnData.form.helpText}}<span class="glyphicon glyphicon-question-sign"></span>{{/tool-tip}}
+      </div>
+    {{/if}}
+  </div>
+{{/if}}
+<div class={{inputClass}}>
+  {{#if columnData.form.fieldDescription}}<span>{{columnData.form.fieldDescription}}</span>{{/if}}
+  <div class="validateField">
+    {{!-- main input component --}}
+    {{component columnData.form.inputComponent value=value disabled=isDisabled columnData=columnData formItem=this}}
+    {{#unless showLabelComp}}
+      {{#if columnData.form.helpText}}
+        <div class="label-tooltip">
+          {{#tool-tip placement="right" title=columnData.form.helpText}}<span class="glyphicon glyphicon-question-sign"></span>{{/tool-tip}}
+        </div>
+      {{/if}}
+    {{/unless}}
+    {{#if invalid}}
+      {{#if invalidReason}}<span class="help-block text-danger">{{invalidReason}}</span>{{/if}}
+    {{/if}}
+  </div>
+</div>

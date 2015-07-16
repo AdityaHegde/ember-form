@@ -1,6 +1,6 @@
 import Ember from "ember";
 
-export default Ember.Test.registerHelper("raiseFileUploadEvent", function (app, form, fileName, fileType, content, context) {
+export default Ember.Test.registerHelper("raiseFileUploadEvent", function (app, form, fileName, fileType, content) {
   var
   files = [{
     name : fileName,
@@ -9,7 +9,7 @@ export default Ember.Test.registerHelper("raiseFileUploadEvent", function (app, 
     data : content,
   }];
 
-  form.get("childViews.0").change({
+  form.get("childViews.0.childViews.0").change({
     originalEvent : {
       target : {
         files : files,

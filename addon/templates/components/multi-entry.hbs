@@ -1,0 +1,24 @@
+<div class="{{columnData.form.multiEntryContainerClass}}">
+  {{#each value as |value|}}
+    <div class="{{columnData.form.eachMultiEntryClass}}">
+      <div class="{{columnData.form.multiEntryClass}}">
+        {{component columnData.childColumnData.form.formItemComponent record=value columnData=columnData.childColumnData parentForm=this showLabel=columnData.form.showChildrenLabel immediateParent=this}}
+      </div>
+      {{#if columnData.form.canManipulateEntries}}
+        <div class="remove-entry" rel="tooltip" title="{{columnData.form.deleteEntryTitle}}"><a {{action "deleteEntry" value}}>
+          <span class="glyphicon glyphicon-trash"></span>
+        </a></div>
+        <div class="add-entry" rel="tooltip" title="{{columnData.form.addEntryTitle}}"> <a {{action "addEntry"}}>
+          <span class="glyphicon glyphicon-plus"></span>
+        </a></div>
+      {{/if}}
+    </div>
+  {{else}}
+    {{#if columnData.form.canManipulateEntries}}
+      <div class="add-first-entry" rel="tooltip" title="{{columnData.form.addFirstEntryTitle}}"> <a {{action "addEntry"}}>
+        <span class="glyphicon glyphicon-plus"></span>
+      </a></div>
+    {{/if}}
+  {{/each}}
+</div>
+<p class="post-input-help-text">{{{columnData.form.postInputHelpText}}}</p>

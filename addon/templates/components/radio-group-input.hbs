@@ -1,0 +1,5 @@
+{{#each columnData.form.options as |radioOption|}}
+  <div class="radio {{if columnData.form.displayInline "radio-inline"}}">
+    <label>{{ember-form-radio-input name=groupName value=radioOption.value selection=value}} {{radioOption.label}}</label>
+  </div>
+{{/each}}

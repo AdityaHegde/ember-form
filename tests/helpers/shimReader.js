@@ -23,7 +23,7 @@ FileReader.prototype.readAsDataURL = function(file) {
   }, 100);
 };
 
-export default Ember.Test.registerHelper("shimReader", function (app, assert, context) {
+export default Ember.Test.registerHelper("shimReader", function (app, assert) {
   assert.ReaderBack = window.FileReader;
   window.FileReader = FileReader;
 });

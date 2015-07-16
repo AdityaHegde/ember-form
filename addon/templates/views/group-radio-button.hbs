@@ -1,5 +1,0 @@
-{{#each view.columnData.form.options as |radioOption|}}
-  <div class="raido {{{if view.columnData.form.displayInline "radio-inline"}}}">
-    <label>{{view "emberFormRadioInput" name=view.groupName value=radioOption.val selection=view.value}}<span></span>{{{radioOption.label}}}</label>
-  </div>
-{{/each}}
